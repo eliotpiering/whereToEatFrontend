@@ -1,0 +1,17 @@
+<h4>Results</h4>
+{{#if model}}
+    <table class="table">
+        <thead>
+        <th>Name</th><th>Menu</th><th>Votes</th>
+        </thead>
+        <tbody>
+        {{#each arrangedContent}}
+            <tr>
+                <td>{{name}}</td>
+                <td><a {{bind-attr href=menu}}>{{menu}}</a></td>
+                <td>{{votes}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+{{/if}}

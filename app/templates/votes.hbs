@@ -1,0 +1,20 @@
+{{#if model}}
+    <table class="table">
+        <thead>
+        <th>Name</th><th>Menu</th><th>Visited</th><th>Vote</th>
+        </thead>
+        <tbody>
+        {{#each}}
+            <tr>
+                <td>{{name}}</td>
+                <td><a {{bind-attr href=menu}}>{{menu}}</a></td>
+                <td>{{visited}}</td>
+                <td>{{check-box action='checked' itemId=id}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+    <button class='button' {{action 'vote'}}>Submit Vote</button>
+{{else}}
+    <p>Sorry no fixtures found for restaurants</p>
+{{/if}}
