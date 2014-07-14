@@ -6,10 +6,10 @@
         <tbody>
         {{#each}}
             <tr>
-                <td>{{name}}</td>
-                <td><a {{bind-attr href=menu}}>{{menu}}</a></td>
-                <td>{{visited}}</td>
-                <td>{{check-box action='checked' itemId=id}}</td>
+                <td>{{this.name}}</td>
+                <td><a {{bind-attr href=this.menu}}>{{this.menu}}</a></td>
+                <td>{{this.visited}}</td>
+                <td>{{check-box action='checked' itemId=this.id}}</td>
             </tr>
         {{/each}}
         </tbody>

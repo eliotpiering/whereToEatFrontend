@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
     this.route("votes", {path: '/vote'});
     this.route("results", {path: "/results"});
+    this.route('restaurant');
 });
 
 export default Router;

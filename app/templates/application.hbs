@@ -1,3 +1,13 @@
 <div class="jumbotron"><h2 id='title'>Where should we eat today?</h2></div>
 
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li>{{#link-to 'votes'}}Vote{{/link-to}}</li>
+      <li>{{#link-to 'results'}}Results{{/link-to}}</li>
+      <li>{{#link-to 'restaurant'}}Add a Restaurant{{/link-to}}</li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
 {{outlet}}
