@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "ember server",
+    "postinstall":"bower install",
+    "start": "ember server --environment=production --port=${PORT}",
     "build": "ember build",
     "test": "ember test"
   },
