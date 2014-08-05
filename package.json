@@ -7,10 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "postinstall":"bower install",
     "start": "ember server --environment=production --port=${PORT}",
     "build": "ember build",
-    "test": "ember test"
+    "test": "ember test",
+    "postinstall":"./node_modules/ember-cli/bin/bower install"
   },
   "repository": "https://github.com/stefanpenner/ember-cli",
   "engines": {
