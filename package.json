@@ -27,7 +27,7 @@
     "express": "^4.1.1",
     "glob": "^3.2.9",
     "originate": "0.1.5",
-    "socket.io": "latest",
+    "socket.io": "latest"
   },
   "dependencies": {
     "bower": "~1.3.8"
