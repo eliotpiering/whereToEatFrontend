@@ -5,6 +5,14 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    ///'simple-auth': {
+    ///  authorizer: 'simple-auth-authorizer:oauth2-bearer',
+    //  serverTokenRevokationEndpoint: "http://127.0.0.1/votes",
+    //  refreshAccessTokens: true,
+    //  clientId: "542207352831-3gkq637ef90nqugt7lael5888cmaiip0.apps.googleusercontent.com",
+    //  authBaseUri: "http://127.0.0.1",
+    //  redirectUri: "http://127.0.0.1/votes"
+    //},
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -12,7 +20,9 @@ module.exports = function(environment) {
       }
     },
 
+
     APP: {
+
       // Here you can pass flags/options to your application instance
       // when it is created
     }
@@ -33,6 +43,8 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
+
 
   return ENV;
 };
