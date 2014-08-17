@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
     selectedList: [],
+    sortProperties: ['visited'],
+    sortAscending: true,
 
-    actions: {
+
+  actions: {
         vote: function() {
             var selectedList = this.get('selectedList');
             var controller = this;
@@ -31,19 +34,6 @@ export default Ember.ArrayController.extend({
                 selectedList.removeObject(item);
             }
             return false;
-        },
-        deleteRestaurant: function(restaurant){
-          if (confirm("Are you sure you want to delete this restaurant from the database")){
-            restaurant.deleteRecord();
-            restaurant.save();
-          }
-        return false;
-        },
-
-        toggleVisited: function(restaurant){
-          restaurant.toggleProperty('visited');
-          restaurant.save();
-          return false;
         }
     }
 

@@ -1,7 +1,7 @@
 {{#if model}}
     <table class="table">
         <thead>
-        <th>Name</th><th>Menu</th><th>Visited</th><th>Visited?</th><th>Vote</th><th>Remove Restaurant</th>
+        <th>Name</th><th>Menu</th><th>Visited</th><th>Visited?</th><th>Remove Restaurant</th>
         </thead>
         <tbody>
         {{#each}}
@@ -10,7 +10,6 @@
                 <td><a {{bind-attr href=this.menu}}>{{this.menu}}</a></td>
                 <td>{{#if visited}}<span class="visited">Yes</span>{{else}}<span class="not-visited">No</span>{{/if}}</td>
                 <td><button class="btn btn-sm" {{action 'toggleVisited' this}}>Toggle Visited</button></td>
-                <td>{{check-box action='checked' itemId=this.id}}</td>
                 <td><button class="btn btn-sm" {{action 'deleteRestaurant' this}}>Delete Restaurant</button></td>
             </tr>
         {{/each}}

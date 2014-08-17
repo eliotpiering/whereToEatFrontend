@@ -8,6 +8,7 @@ Router.map(function() {
     this.route("votes", {path: '/vote'});
     this.route("results", {path: "/results"});
     this.route('restaurant');
+    this.route('update');
 });
 
 export default Router;
