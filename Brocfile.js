@@ -19,9 +19,7 @@ var app = new EmberApp({
   }
 });
 
-app.import({
-  production: "vendor/handlebars/handlebars.js"
-});
+app.import("vendor/handlebars/handlebars.js");
 
 
 //app.import('vendor/ember-data-sails-adapter/ember-data-sails-adapter.js')
