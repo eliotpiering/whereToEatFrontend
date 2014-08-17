@@ -6,16 +6,21 @@ var fileMover = require('broccoli-file-mover');
 
   var vendorTree = fileMover('vendor', {
     files: {
-    'ember-dev/index.js': 'ember/ember.js',
-    'ember-prod/index.js': 'ember/ember.prod.js'
+      'ember-dev/index.js': 'ember/ember.js',
+      'ember-prod/index.js': 'ember/ember.prod.js'
    }
 });
 
 var app = new EmberApp({
   name: require('./package.json').name,
+
   trees: {
     vendor: vendorTree
   }
+});
+
+app.import({
+  production: "vendor/handlebars/handlebars.js"
 });
 
 
