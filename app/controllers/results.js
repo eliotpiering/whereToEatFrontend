@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-    content: [],
-    sortProperties: ['votes'],
-    sortAscending: false,
+  content: [],
+  sortProperties: ['votes'],
+  sortAscending: false,
 
   actions: {
     clearVotes: function(){
@@ -14,7 +14,11 @@ export default Ember.ArrayController.extend({
          });
       });
       return false;
-    }
+    },
 
+    beginFinals: function(){
+      var finalists = this.get('arrngedContent').slice(0,2);
+      this.transitionToRoute('finals', finalists);
+    }
   }
 });

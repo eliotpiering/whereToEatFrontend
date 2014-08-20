@@ -13,8 +13,9 @@ export default Ember.ArrayController.extend({
         menu: this.get('newMenu'),
         visited: false,
         votes: 0
-      }).save().then (function(restaurant){
-        console.log("success" + restaurant.get('name'));
+      }).save().then (function(){
+        controller.set('newName', '');
+        controller.set('newMenu', '');
         controller.transitionToRoute('votes');
       }, function(reject){
         console.log('Error ' + reject.message);
