@@ -7,7 +7,10 @@
         {{#each}}
             <tr>
                 <td>{{this.name}}</td>
-                <td><a {{bind-attr href=this.menu}}>{{this.menu}}</a></td>
+                <td>
+			<form {{action "updateMenu" this on="submit"}}>
+              		{{input type="text" value=this.menu}}</form>
+		</td>
                 <td>{{#if visited}}<span class="visited">Yes</span>{{else}}<span class="not-visited">No</span>{{/if}}</td>
                 <td><button class="btn btn-sm" {{action 'toggleVisited' this}}>Toggle Visited</button></td>
                 <td><button class="btn btn-sm" {{action 'deleteRestaurant' this}}>Delete Restaurant</button></td>
