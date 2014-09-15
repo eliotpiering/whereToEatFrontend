@@ -5,7 +5,7 @@ export default Ember.ArrayController.extend({
 
     updateMenu: function(restaurant){
 	restaurant.set('menu', restaurant.get('menu'));
-	    restaurant.save();
+        restaurant.save();
 	return false;
     },
     deleteRestaurant: function(restaurant){
