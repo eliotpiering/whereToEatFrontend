@@ -4,7 +4,7 @@
     "handlebars": "~1.3.0",
     "jquery": "<2.0.0",
     "qunit": "~1.12.0",
-    "ember-data": "https://github.com/emberjs/data.git#1.0.0-beta.8",
+    "ember-data": "1.0.0-beta.8",
     "ember": "components/ember#canary",
     "ember-qunit": "~0.1.5",
     "ember-resolver": "~0.1.1",
@@ -17,7 +17,7 @@
   },
   "resolutions": {
     "ember": "canary",
-    "ember-data": "https://github.com/emberjs/data.git#1.0.0-beta.8",
+    "ember-data": "1.0.0-beta.8",
     "qunit": "~1.13.0"
   }
 }
