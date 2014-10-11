@@ -20,6 +20,8 @@ var app = new EmberApp({
 });
 
 app.import("vendor/handlebars/handlebars.js");
+app.import("vendor/socket.io-client/socket.io.js");
+//app.import('vendor/socket.io-client/socket.io.js');
 
 
 //app.import('vendor/ember-data-sails-adapter/ember-data-sails-adapter.js')

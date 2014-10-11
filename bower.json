@@ -14,6 +14,7 @@
     "ember-qunit-notifications": "^0.0.3",
     "ember-cli-test-loader": "rjackson/ember-cli-test-loader#0.0.2",
     "ember-dev": "http://builds.emberjs.com/canary/ember.js",
-    "ember-prod": "http://builds.emberjs.com/canary/ember.prod.js"
+    "ember-prod": "http://builds.emberjs.com/canary/ember.prod.js",
+    "socket.io-client":"latest"
   }
 }
