@@ -20,13 +20,9 @@ var app = new EmberApp({
 });
 
 app.import("vendor/handlebars/handlebars.js");
-app.import("vendor/socket.io-client/socket.io.js");
-//app.import('vendor/socket.io-client/socket.io.js');
+app.import("vendor/emberfire/dist/emberfire.js");
+app.import("vendor/firebase/firebase.js");
 
-
-//app.import('vendor/ember-data-sails-adapter/ember-data-sails-adapter.js')
-// Use `app.import` to add additional libraries to the generated
-// output files.
 //
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That
