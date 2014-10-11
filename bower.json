@@ -15,5 +15,9 @@
     "ember-dev": "http://builds.emberjs.com/canary/ember.js",
     "ember-prod": "http://builds.emberjs.com/canary/ember.prod.js",
     "emberfire": "~1.2.7"
-  }
+  },
+ "resolutions": {
+     "ember-data" : "1.0.0-beta.10"
+ }
+
 }
