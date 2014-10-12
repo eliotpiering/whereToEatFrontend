@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
     selectedList: [],
     sortProperties: ['votes'],
-    sortAscending: true,
+    sortAscending: false,
 
 
   actions: {

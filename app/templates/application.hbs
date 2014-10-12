@@ -3,6 +3,7 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-right">
+      {{#if isVoting}}<li><a href="#" {{action 'vote'}}>Submit Vote</a></li>{{/if}}
       <li>{{#link-to 'votes'}}Vote{{/link-to}}</li>
       <li>{{#link-to 'results'}}Results{{/link-to}}</li>
       <li>{{#link-to 'restaurant'}}Add a Restaurant{{/link-to}}</li>

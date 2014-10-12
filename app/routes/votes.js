@@ -9,6 +9,6 @@ export default Ember.Route.extend( {
 
   setupController: function (controller, model) {
     controller.set('selectedList', []);
-    controller.set('model', model);
+    controller.set('model', model.filterBy('visited', false));
   }
 });
