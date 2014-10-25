@@ -3,8 +3,8 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-right">
-      {{#if isVoting}}<li><a href="#" {{action 'vote'}}>Submit Vote</a></li>{{/if}}
-      <li>{{#link-to 'votes'}}Vote{{/link-to}}</li>
+      {{#if isFinals}}<li>{{#link-to 'finals'}}Enter Finals{{/link-to}}</li>{{/if}}
+      {{#if isVoting}}<li><a href="#" {{action 'vote'}}>Submit Vote</a></li>{{else}}<li>{{#link-to 'votes'}}Vote{{/link-to}}</li>{{/if}}
       <li>{{#link-to 'results'}}Results{{/link-to}}</li>
       <li>{{#link-to 'restaurant'}}Add a Restaurant{{/link-to}}</li>
       <li>{{#link-to 'update'}}Update Restaurants{{/link-to}}</li>
@@ -13,3 +13,10 @@
 </nav>
 
 {{outlet}}
+
+<div class = "footer">
+  <div class="container">
+    <button class="btn btn-sm" {{action "clearVotes"}}>Clear out all votes</button>
+    <button class="btn btn-group-lg" {{action "beginFinals"}}> Start the finals!</button>
+  </div>
+</div>

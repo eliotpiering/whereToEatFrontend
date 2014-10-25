@@ -4,17 +4,11 @@
     <th>Name</th><th>Menu</th><th>Visited</th><th>Vote</th>
     </thead>
     <tbody>
-    {{#each}}
-      <tr>
-        <td>{{this.name}}</td>
-        <td><a {{bind-attr href=this.menu}}>{{this.menu}}</a></td>
-        <td>{{#if visited}}<span class="visited">Yes</span>{{else}}<span class="not-visited">No</span>{{/if}}</td>
-        <td>{{check-box action='checked' itemId=this.id}}</td>
-      </tr>
+    {{#each arrangedContent}}
+      {{partial 'vote-partial'}}
     {{/each}}
     </tbody>
   </table>
-  <button class='button' {{action 'vote'}}>Submit Vote</button>
 {{else}}
   <p>Sorry no fixtures found for restaurants</p>
 {{/if}}

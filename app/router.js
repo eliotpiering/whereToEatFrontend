@@ -9,6 +9,7 @@ Router.map(function() {
     this.route("results", {path: "/results"});
     this.route('restaurant');
     this.route('update');
+    this.route('finals');
   this.route('finals');
 });
 

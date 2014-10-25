@@ -5,12 +5,7 @@
         </thead>
         <tbody>
         {{#each}}
-            <tr>
-                <td>{{this.name}}</td>
-                <td><a {{bind-attr href=this.menu}}>{{this.menu}}</a></td>
-                <td>{{this.votes}}</td>
-                <td>{{check-box action='checked' itemId=this.id}}</td>
-            </tr>
+          {{partial 'vote-partial'}}
         {{/each}}
         </tbody>
     </table>
