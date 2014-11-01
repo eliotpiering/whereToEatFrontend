@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.ArrayController.extend({
+export default Ember.ObjectController.extend({
   isCreatingNewRestaurant: false,
   newName: '',
   newMenu: '',
@@ -8,7 +8,7 @@ export default Ember.ArrayController.extend({
   actions: {
     createNewRestaurant: function() {
       var controller = this;
-      this.get('store').createRecord("restaurant", {
+      this.get('model').setProperties({
         name: this.get('newName'),
         menu: this.get('newMenu'),
         visited: false,

@@ -1,15 +1,15 @@
 import Ember from 'ember';
 
-export default Ember.ObjectController.extend({
+export default Ember.Controller.extend({
     needs: ['votes', 'finals'],
+
+    setIsVoting: (function () {
+        this.set('isVoting', (this.get('currentPath') === 'votes' || this.get('currentPath') === 'finals'));
+    }).observes('currentPath'),
 
     isVoting: (function () {
         return (this.get('currentPath') === 'votes' || this.get('currentPath') === 'finals');
-    }).observes('currentPath'),
-
-    isFinals: (function () {
-        return this.get('model.isFinals');
-    }).property('model'),
+    }).property(),
 
     actions: {
 
@@ -39,10 +39,9 @@ export default Ember.ObjectController.extend({
         beginFinals: function () {
            var finalModel = this.get('model');
            this.get('store').findAll('restaurant').then(function(canidates){
-             canidates.sortBy('vote').slice(0, 3);
              finalModel.set('isFinals', true);
              finalModel.get('finalists').then(function (finalists) {
-                 finalists.replaceContent(0, 3, canidates);
+                 finalists.setObjects(canidates.sortBy('votes').slice(-4));
                  finalModel.save();
              });
            });

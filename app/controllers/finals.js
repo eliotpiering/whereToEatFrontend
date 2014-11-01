@@ -6,6 +6,6 @@ export default Ember.ArrayController.extend(Voteable, {
   content: [],
   sortProperties: ['votes'],
   sortAscending: false,
-  votesAllowed: 1
+  votesAllowed: 2
 
 });
