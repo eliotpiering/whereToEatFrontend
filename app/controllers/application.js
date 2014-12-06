@@ -11,6 +11,23 @@ export default Ember.Controller.extend({
         return (this.get('currentPath') === 'votes' || this.get('currentPath') === 'finals');
     }).property(),
 
+    selectFinalists: function (canidates) {
+        var votesArray = canidates.mapBy('votes').sort(function(a, b){return b-a});
+        var tieBreaker = 0;
+        var numberToSelect = null;
+        votesArray.some(function(votes, index) {
+            if (index === 2) {
+                tieBreaker = votes
+            }
+            if (votes < tieBreaker) {
+                numberToSelect = index;
+                return true;
+            }
+        });
+        numberToSelect = numberToSelect || 3;
+        return canidates.sortBy('votes').slice(0 - numberToSelect);
+    },
+
     actions: {
 
         vote: function () {
@@ -37,11 +54,12 @@ export default Ember.Controller.extend({
             return false;
         },
         beginFinals: function () {
+           var controller = this;
            var finalModel = this.get('model');
            this.get('store').findAll('restaurant').then(function(canidates){
              finalModel.set('isFinals', true);
              finalModel.get('finalists').then(function (finalists) {
-                 finalists.setObjects(canidates.sortBy('votes').slice(-4));
+                 finalists.setObjects(controller.selectFinalists(canidates));
                  finalModel.save();
              });
            });

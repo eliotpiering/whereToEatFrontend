@@ -9,3 +9,8 @@ span.visited {
 span.not-visited {
     color: #b22222;
 }
+
+.vote-link:hover {
+    background-color: lightgreen !important;
+    border-radius: 10px;
+ }
